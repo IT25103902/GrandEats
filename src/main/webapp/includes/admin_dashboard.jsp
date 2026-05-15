@@ -163,7 +163,7 @@
 
     </div>
 
-    <!-- 🔴 jQuery සහ DataTables JS -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
@@ -193,7 +193,7 @@
                 });
             } else if (msg === 'cancelled') {
                 Swal.fire({
-                    icon: 'success', // Reject කළත් ඒක සාර්ථකව වුණ නිසා Success අයිකන් එක
+                    icon: 'success',
                     title: 'Rejected!',
                     text: 'Reservation successfully rejected and cancelled!',
                     confirmButtonColor: '#dc3545'

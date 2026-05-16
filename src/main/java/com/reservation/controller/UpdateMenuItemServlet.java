@@ -2,4 +2,4 @@ package com.reservation.controller;
 
 public class UpdateMenuItemServlet {
 }
-// updates the MenuItem object,
+// It collects updated form data from the admin,

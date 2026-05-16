@@ -1,3 +1,3 @@
 <%
- Admin page for managing menu items
+ Used to add and manage restaurant menu items
   %>

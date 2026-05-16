@@ -1,3 +1,3 @@
 <%
-Displays menu items for customers
+Shows available food items and prices
 %>

@@ -48,4 +48,4 @@ public class AddMenuItemServlet extends HttpServlet {
         }
     }
 }
-// It receives form data from admin_menu.jsp
+// and sends the updated data to MenuService.

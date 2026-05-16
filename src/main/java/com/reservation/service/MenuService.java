@@ -2,4 +2,4 @@ package com.reservation.service;
 
 public class MenuService {
 }
-// It communicates with the database,
+// This service class contains business logic related to menu management.

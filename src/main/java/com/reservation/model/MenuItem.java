@@ -2,4 +2,4 @@ package com.reservation.model;
 
 public class MenuItem {
 }
-// item ID, name, category, price, status, and image URL
+// It stores menu item details such as Id,nameand url such as

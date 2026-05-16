@@ -23,7 +23,7 @@ public class SubmitMessageServlet extends HttpServlet {
         String fullMessage = "Subject: " + subject + " | Message: " + message;
 
         MessageService ms = new MessageService();
-        boolean isSaved = ms.addMessage(name, email, fullMessage);
+        boolean isSaved = ms.addmessage(name, email, fullMessage);
 
         // Redirect to contact page with proper success or error query parameter
         String redirectUrl = isSaved ? "contact.jsp?success=true" : "contact.jsp?error=true";

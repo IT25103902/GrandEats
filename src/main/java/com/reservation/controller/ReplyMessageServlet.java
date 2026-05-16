@@ -1,7 +1,26 @@
 package com.reservation.controller;
 
-public class ReplyMessageServlet {
-    // TODO: Step 1 - Extract and parse the unique messageId from the admin interface request
-    // TODO: Step 2 - Connect with MessageService layer to trigger the status update logic
-    // TODO: Step 3 - Redirect back to the admin dashboard with the corresponding execution status token
+import com.reservation.service.MessageService;
+import java.io.IOException;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/ReplyMessageServlet")
+public class ReplyMessageServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("messageId"));
+
+        MessageService ms = new MessageService();
+        boolean isUpdated = ms.updateMessageStatus(id);
+
+        // Redirect to admin message dashboard based on update status
+        String redirectUrl = isUpdated ? "admin_messages.jsp?replySuccess=true" : "admin_messages.jsp?error=true";
+        response.sendRedirect(redirectUrl);
+    }
 }

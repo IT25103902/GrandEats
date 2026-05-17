@@ -1,8 +1,23 @@
 package com.reservation.util;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class DBConnection {
-    // TODO: Step 1 - Define static configuration constants for MySQL connection properties (URL, User, Password)
-    // TODO: Step 2 - Load and register the MySQL JDBC Driver class into runtime memory
-    // TODO: Step 3 - Establish and return the raw connection object using DriverManager architecture
-    // TODO: Step 4 - Implement robust multi-exception catch blocks to track driver loading or connectivity dropouts
+    private static final String URL = "jdbc:mysql://localhost:3307/grandeats_db";
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
+
+    // Establish and return the database connection
+    public static Connection getConnection() {
+        Connection connection = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return connection;
+    }
 }

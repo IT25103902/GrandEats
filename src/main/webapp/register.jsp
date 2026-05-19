@@ -1,3 +1,0 @@
-
-
-<%-- This is register jsp --%>

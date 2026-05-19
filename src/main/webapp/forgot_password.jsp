@@ -18,6 +18,7 @@
             <input type="email" name="email" placeholder="Enter Registered Email" required>
             <button type="submit" class="btn-submit">Send Code</button>
         </form>
+
         <a href="login.jsp" style="display: block; margin-top: 15px; font-size: 13px; color: #777;">Back to Login</a>
     </div>
 </body>

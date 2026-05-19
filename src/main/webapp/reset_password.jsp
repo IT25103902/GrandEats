@@ -37,6 +37,7 @@
         <% } %>
 
         <form action="ResetPasswordServlet" method="POST" class="auth-form">
+
             <input type="text" name="otp" placeholder="Enter 6-Digit Code" maxlength="6" pattern="[0-9]{6}" required>
             <input type="password" name="newPassword" placeholder="Enter New Password" required>
             <button type="submit" class="btn-submit">Reset Password</button>
